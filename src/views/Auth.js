@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import data from "../data/data.json";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { authentication } from "features/auth/authState";
 import "../assets/css/auth.css";
 
@@ -16,7 +15,7 @@ export default function Authentication() {
   const [message, setMessage] = useState("");
   const [errMsg, setErrMsg] = useState("");
 
-  const { user } = useSelector((state) => state.auth);
+  // const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 
   useEffect(() => {
